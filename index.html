@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+</head>
+<title>
+    Raghav Sahni
+</title>
+
+<body data-barba="wrapper">
+
+    
+    <div id="particles-js">
+    <div id="bg"></div>
+    
+    
+    <main>
+        
+        <div id="primary">
+            <h1 id="h1">Raghav Sahni</h1>
+            <h3 id="h3">Front-end Developer</h3>
+        </div>
+
+        <div class="rectangle1"></div>
+        <div class="rectangle2"></div>
+
+        <div id="imageSocial">
+                <div><a href="linkedin.com/in/raghav-s-451087bb/" target="_blank"><img id="linkedin" src="resources\LI-Logo.png"></a>
+                </div> 
+                <div>
+                    <a href="https://github.com/raghavsahni" target="_blank">
+                           <img id="github" src="resources\GitHub_Logo.png">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://drive.google.com/file/d/1D7P5WOXVXZASwLfb4jCxM00kakpHtvK1/view?usp=sharing" target="_blank">
+                        <img id="drive" src="resources\googledrive.png">
+                    </a>
+                </div>
+         </div>
+    
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+
+    <script>
+        document.title = "Raghav Sahni";
+        var tl = gsap.timeline();
+        var x = 0;
+        if(screen.width > 840) {
+            if(x === 0 ) {
+                tl.to('.rectangle1', { duration: 1, x: -700, delay: 1, ease: "expo.out" })
+                gsap.to('.rectangle2', { duration: 1, x: -550, delay: 1, ease: "sine.out" })
+                x = 1;
+            }
+            
+
+            var tl2 = gsap.timeline()
+            tl2.fromTo('#linkedin', {x: 1000, y:0}, { duration: 1, x: 0, y: 0, delay: 0, ease: "expo.out" })
+            tl2.fromTo('#github', {x: 1000, y:0}, { duration: 0.8, x: 0, y: 0, delay: 0, ease: "expo.out" })
+            tl2.fromTo('#drive', {x: 1000, y:0}, { duration: 0.6, x: 0, y: 0, delay: 0, ease: "expo.out" })
+
+            
+
+        } else {
+            var tl2 = gsap.timeline()
+            tl2.fromTo('#linkedin', {x: 0, y:600}, { duration: 1, x: 0, y: 0, delay: 0, ease: "expo.out" })
+            tl2.fromTo('#github', {x: 0, y:600}, { duration: 1, x: 0, y: 0, delay: 0, ease: "expo.out" })
+            tl2.fromTo('#drive', {x: 0, y:600}, { duration: 1, x: 0, y: 0, delay: 0, ease: "expo.out" })
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js">
+    </script>
+    <script src="particle.js">
+    </script>
+    </div>
+</body>
+
+</html>
